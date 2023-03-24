@@ -11,8 +11,4 @@ export function getAppointmentsForDay(state, day) {
     .map(id => state.appointments[id]);
   
   return appointments;
-
 }
-
-
-
