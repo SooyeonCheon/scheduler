@@ -7,8 +7,6 @@ import Form from "components/Appointment/Form";
 afterEach(cleanup);
 
 describe("Form", () => {
-  
-
   const interviewers = [
     {
       id: 1,
@@ -59,7 +57,7 @@ describe("Form", () => {
     expect(onSave).not.toHaveBeenCalled();
   });
   
-  it("calls onSave function when the name and interviewer is defined", () => {
+  xit("calls onSave function when the name and interviewer is defined", () => {
     /* 1. Create the mock onSave function */
     const onSave = jest.fn();
     /* 2. Render the Form with interviewers, name and the onSave mock function passed as an onSave prop */
@@ -79,4 +77,20 @@ describe("Form", () => {
     expect(onSave).toHaveBeenCalledTimes(1);
     expect(onSave).toHaveBeenCalledWith("Lydia Miller-Jones", 1);
   });
+
+  it("submits the name entered by the user", () => {
+    const onSave = jest.fn();
+    const { getByText, getByPlaceholderText } = render(
+      <Form interviewers={interviewers} onSave={onSave} interviewer={1} />
+    );
+  
+    const input = getByPlaceholderText("Enter Student Name");
+  
+    fireEvent.change(input, { target: { value: "Lydia Miller-Jones" } });
+    fireEvent.click(getByText("Save"));
+  
+    expect(onSave).toHaveBeenCalledTimes(1);
+    expect(onSave).toHaveBeenCalledWith("Lydia Miller-Jones", 1);
+  });
+
 });
