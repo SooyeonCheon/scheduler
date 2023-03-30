@@ -6,10 +6,13 @@ Interview Scheduler is a SPA (Single Page Application) for tracking students int
 
 ## Screenshots
 
-By selecting a weekday on the left panel, a user can see booked appointments and available slots for each day.
-A user can book an interview in an empty appointment slot.
-A user can edit the details of an existing interview.
+!["home"](https://github.com/SooyeonCheon/scheduler/blob/f9a51f15aa38b839933d5aafd5322a4385084ced/docs/01_list.jpg)
+A user can see appointments list and available slots for each day.
 
+!["save"](https://github.com/SooyeonCheon/scheduler/blob/f9a51f15aa38b839933d5aafd5322a4385084ced/docs/02_edit_save.jpg)
+A user can book an interview in an empty appointment slot and edit the details of an existing interview.
+
+!["confirm"](https://github.com/SooyeonCheon/scheduler/blob/f9a51f15aa38b839933d5aafd5322a4385084ced/docs/03_confirm.jpg)
 A user is presented with a confirmation when they attempt to cancel an interview.
 
 ## Setup
