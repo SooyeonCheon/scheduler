@@ -35,10 +35,9 @@ Dependencies:
   - testing-library/jest-dom
   - testing-library/react
   - testing-library/react-hooks
-  -  babel-loader
-  -  prop-types
-  -  react-test-renderer
-  -  sass
+  - prop-types
+  - react-test-renderer
+  - sass
 
 ## Running Webpack Development Server
 
