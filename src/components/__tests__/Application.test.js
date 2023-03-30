@@ -21,7 +21,6 @@ describe("Application", () => {
     const { container, debug } = render(<Application />);
 
     await waitForElement(() => getByText(container, "Archie Cohen"));
-    // console.log(prettyDOM(container));
     const appointments = getAllByTestId(container, "appointment");
     const appointment = appointments[0];
     // console.log(prettyDOM(appointment));
